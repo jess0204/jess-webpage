@@ -1,0 +1,466 @@
+/*Font sizes etc for majority of webssite pieces*/
+h1{
+    font: 2.5rem 'Lucida Grande';
+    padding: 10px;
+}
+
+h3{
+    font: 1.4rem arial;
+    padding:10px;
+}
+
+h6{
+    font: 1.25rem Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: arial; 
+  margin:0
+}
+
+/*Navigation*/
+.container-nav{
+    width: 80%;
+    margin: 0 auto;
+}
+
+header{
+    background: #CCE2EA;
+}  
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo{
+    float: left;
+    width: 50px;
+    padding: 10px 0;
+}
+
+nav{
+    float: right;
+    max-width: 100%;
+}
+
+nav ul{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+    
+    position: relative; /* if I didn't have this realtive it would make the hover bar stretch to 100% of the page*/
+}
+
+nav a{
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.33vw;
+    font-size: 14px;
+}
+
+nav a:hover{
+    color: #689DB0;
+}
+
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: #689DB0;
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+#login-text{
+    left: auto;
+    top: auto;
+    position: relative;
+}
+
+.login, a{
+	list-style: none;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 3.4vh;
+}
+
+.login{
+	float: right;
+	width: 162px;
+	height: 72px;
+	left: 1181px;
+	top: 56px;
+	text-align: center;
+	background-color: rgba(163, 187, 75, 0.48);
+}
+
+/*
+div{
+	height: 40vh; this would work but would also apply to the nav abr which I dont want 
+}*/
+
+/*Blue Div 3rd*/
+.blue{
+	background-color: #cce2ea ;
+	height: 50vh;
+    
+}
+
+.blue img { /* makes image center*/
+    display:block;
+    margin:auto;
+    width: 50%;
+}
+/*white div 3rd*/
+.white{
+	background-color: white;
+	height: 50vh;
+    
+}
+ /*this is for the weclome page imaging and text in the white part*/
+article {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1;
+  grid-auto-rows: minmax(100px, auto);
+  background: white;
+}
+.image{
+  width: 80%;
+  padding-top: 80px;
+  
+}
+
+.text{
+  padding-top: 50%;
+}
+
+@media screen and (min-width: 100px) {
+  article {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background: white;
+  }
+  .text:nth-of-type(3) {
+      grid-column: 2;
+      grid-row: 2;
+  
+  }
+  .image, .text {
+    /* height: 20vh; */
+    overflow: hidden;
+  
+    }
+}
+
+@media  screen and (min-width:800px) {
+  article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: white;
+}
+.text{
+  padding-top: 30%;
+}
+
+.image{
+  padding-top: 100px;
+  width: 100%;
+}
+}
+
+.white h6{
+ position: absolute;
+  top: 530px;
+  left: 430px;
+  width: 500px;
+  height: 100px;
+  margin-top: 50px;
+  padding-top: 0px;
+  width: inherit;
+  text-align: center;
+
+  /* border: 3px solid #73AD21; */
+
+}
+
+/*orange div 3rd*/
+.orange{
+	background-color: rgba(250, 200, 148, 0.35);
+	height: 50vh;
+}
+
+.orange h6{
+    width: 1076px;
+    height: 84px;
+    left: 180px;
+    top: 1750px;
+    margin-top: 50px;
+    padding-top: 0px;
+    width: inherit;
+    text-align: center;
+}
+
+.signup{
+    display: block;
+    width: 226px;
+    padding: .25rem 1rem;
+    border-radius: 20px/10px;
+    margin: 1rem auto;
+    background-color: #FAC894;
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.orange h3{
+    text-align: center;
+    padding-top: 1.5rem;
+
+}
+
+.home-center{
+ text-align: center;
+ font-size: 2.5em;
+ padding:90px;
+}
+
+/*.............................................*/
+
+/*this code is for my quotes container*/
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    background: #FDECDA;
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  
+  /* The dot/bullet/indicator container */
+  .dot-container {
+      text-align: center;
+      padding: 20px;
+      /* background: #ddd; */ /*this had a background and wasnt the best looking*/
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  /* Add a background color to the active dot/circle */
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Add an italic font style to all quotes */
+  q {font-style: italic;}
+  
+  /* Add a blue color to the author */
+  .author {color: cornflowerblue;}
+
+  /*.............................................*/
+  /* Mental Health Page*/
+  .center{
+    text-align: center;
+    padding-top: 80px;
+    font-weight: bold;
+    }  
+
+    .link_center{
+      text-align: center;
+      padding-top: 10px;
+      font-size: 2.5vh;
+      }  
+
+    .mental_health{
+      display:block;
+    margin:auto;
+    width: 35%;
+    }
+
+    .white a{
+      color: blue;
+      font-size: 3vh;
+    }
+
+    @media screen and (min-width:500px){
+      .mental_health{
+        display:block;
+      margin:auto;
+      width: 30%;
+    }
+
+  }
+  /*.............................................*/
+
+  /*mood items*/
+  .mood {
+    --c: transparent;
+    --h: 154;
+    --s: 80%;
+    --l: 60%;
+    --size: 90%;
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mood__heading {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: clamp(1rem, -0.8750rem + 8.3333vw, 3.5rem);
+    font-weight: 700;
+    margin-block-end: 0.25em;
+  }
+  .mood__icon {
+    --f: hsl(var(--h), var(--s), var(--l));
+    aspect-ratio: 1;
+    block-size: var(--size);
+    color: var(--c);
+    fill: var(--f);
+    inline-size: var(--size);
+    stroke: var(--f);
+  }
+  .mood input {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+  .mood input:checked + .mood__icon { 
+    animation: updown 1.5s ease-in-out both;
+    transform-origin: center center;
+    --c: hsl(var(--h), var(--s), var(--l));
+    --f: hsl(var(--h), 40%, 40%);
+  }
+  @keyframes updown {
+    25% {
+      transform: scale(1.2);
+      animation-timing-function: ease-in;
+    }
+    50% {
+      transform: scale(1);
+      animation-timing-function: ease-out;
+    }
+  }
+
+  .submit{
+    display: block;
+    width: 226px;
+    padding: .55rem 1rem;
+    border-radius: 20px/10px;
+    margin: 1rem auto;
+    background-color: #0090E6;
+    color: #FAC894;
+    text-align: center;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.orange img{
+opacity: 0.5;
+display:block;
+margin:auto;
+width: 20%;
+}
+
+
+footer{
+    text-align: center;
+}
+
+/*media Quaires*/
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+@media only screen and (min-width:850) {
+  .orange img{
+    opacity: 0.5;
+    display:block;
+  margin:auto;
+  width: 30%;
+  }
+ 
+}
+/* Mental Health Page adjustments*/
+@media only screen and (min-width: 300px) {
+  .center{
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    }  
+
+}
+
+    @media only screen and (max-width: 800px){
+    .mental_health{
+      display:block;
+    margin:auto;
+    width: 50%;
+  
+}
+    }
